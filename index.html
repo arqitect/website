@@ -1,147 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<html class="dark">
 <body>
-    <div class="main">
-  
-	<div class="header-top">
-      <button class="button-nav">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </button>
-      <h1 value="eric fadeyev">eric fadeyev</h1>
-	</div>
-  
-	<!-- navigation open -->
-		<div class="navigation" id="navigation-demo">
-	  		<nav>
-          <div class="navigation-button">
-      				<button class="button-close">×</button>
-          </div>
-
-          <h3 class="navigation-heading" value="who am i">heading number 1</h3>
-	    		<ul class="navigation-list">
-	      			<li><a href="#">bio</a></li>
-	      			<li><a href="#">resume</a></li>
-                                <li><a href="#">blog</a></li>
-	    		</ul>
-              
-          <h3 class="navigation-heading" value="heading number 2">my apps</h3>
-	    		<ul class="navigation-list">
-	      			<li><a href="apps/music.html">rgen audio</a></li>
-	      			<li><a href="#">Link 5</a></li>
-              <li><a href="#">Link 6</a></li>
-	    		</ul>
-              
-	  		</nav>
-		</div>
-	    
-          <script src="script.js"></script>
-	    
-	<!-- navigation close -->
-  
-  	<svg class="svg-filters" width="0" height="0" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg" version="1.1" style="position: absolute; visibility: hidden;">
-	<defs>
-		<filter id="watercolor">
-			
-			<!-- FILL -->
-			<feTurbulence seed="1" result="noise" type="fractalNoise" baseFrequency="0.0015" numOctaves="4" />
-			<feColorMatrix type="saturate" values="0" />
-			<feColorMatrix
-				type="matrix"
-				values="20 0 0 0 -4
-								0 20 0 0 -4
-								0 0 20 0 -4
-								0 0 0 1 1">
-				<animate
-					attributeName="values"
-					values="20 0 0 0 -14
-									0 20 0 0 -14
-									0 0 20 0 -14
-									0 0 0 1 1;
-									20 0 0 0 -4
-									0 20 0 0 -4
-									0 0 20 0 -4
-									0 0 0 1 1"
-					dur="10s"
-					repeatCount="1" />
-			</feColorMatrix>
-			<feColorMatrix result="fill" type="luminanceToAlpha" />
-			
-			<!-- LINE -->
-      <feConvolveMatrix
-				in="SourceGraphic"
-        kernelMatrix="3 0 0
-                      0 0 0
-                      0 0 -2" />
-			<feColorMatrix type="saturate" values="0"/>
-			<feColorMatrix
-				type="matrix"
-				result="line"
-				values="9 0 0 0 -1
-								0 9 0 0 -1
-								0 0 9 0 -1
-								0 0 0 1 1" />
-
-			<!-- FILL2 -->
-			<feColorMatrix in="noise" type="saturate" values="0" />
-			<feColorMatrix
-				type="matrix"
-				values="20 0 0 0 -4
-								0 20 0 0 -4
-								0 0 20 0 -4
-								0 0 0 1 1">
-				<animate
-					attributeName="values"
-					values="20 0 0 0 -14
-									0 20 0 0 -14
-									0 0 20 0 -14
-									0 0 0 1 1;
-									20 0 0 0 -4
-									0 20 0 0 -4
-									0 0 20 0 -4
-									0 0 0 1 1"
-					dur="30s"
-					repeatCount="1" />
-			</feColorMatrix>
-			<feColorMatrix result="fill2" type="luminanceToAlpha" />
-			
-			<!-- COMP -->
-			<feFlood result="flood" flood-color="#fff" />
-			<feComposite in="line" in2="fill" operator="in" />
-			<feComposite result="fill3" in="fill2" operator="and" />
-			<feComposite in2="flood" operator="and" />
-			<feColorMatrix
-				type="matrix"
-				values="-1 0 0 0 1 
-								 0 -1 0 0 1 
-								 0 0 -1 0 1 
-								 0 0 0 1 0" />
-			<feColorMatrix result="fill4" type="luminanceToAlpha" />
-			
-			<feComposite in="SourceGraphic" in2="fill4" operator="in" />
-		  <feComposite in2="SourceAlpha" operator="in" />
-		</filter>
-	</defs>
-</svg>
-
-
-<!-- USE ANY IMAGE,
-     ILLUSTRATIONS AND WATERCOLOR WORK BEST -->
-<img src="content/banner-watercolor.jpg" alt="watercolor" class="water-img">
-  	
-</div>
-
-<h1>THIS IS THE HOME SCREEN</h1>
-
-<!-- get jquery and sidebar script -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="script.js"></script>
+    <button aria-pressed="false" class="direction-handler">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50">
+        <rect width="32" height="32" x="25" y="2.38" stroke="currentColor" stroke-width="2" rx="3" transform="rotate(45 25 2.38)"/>
+        <path fill="currentColor" d="M14 29.2v-8.4h11.11V14L36 25 25.11 36v-6.8H14Z"/>
+      </svg>
+      <span class="sr-only">Change orientation</span>
+    </button>
+    <nav data-magnetic>
+      <ul>
+        <li><a href="#home" id="home">Home</a></li>
+        <li><a href="#links" id="links">Links</a></li>
+        <li><a href="#photos" id="photos">Photos</a></li>
+        <li><a href="#projects" id="projects">Projects</a></li>
+        <li><a href="#ai" id="ai">AI</a></li>
+        <li><a href="#socials" id="socials">Socials</a></li>
+      </ul>
+    </nav>
+    <button class="theme" aria-pressed="false">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <defs>
+          <mask>
+            <path fill="black" id="sun" d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+          </mask>
+        </defs>  
+        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
+        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+      </svg>
+      <span class="sr-only">Set theme to dark.</span>
+    </button>
+    <script src="script.js"></script>
 </body>
 </html>
