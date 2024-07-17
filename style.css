@@ -12,6 +12,7 @@ body{
     min-height: 100vh;
     background-color: var(--primary-dark);
     font-family: 'Tahoma', sans-serif;
+    color: var(--secondary-light);
 }
 nav {
     background-color: var(--tertiary-grey);
@@ -85,4 +86,8 @@ nav a:hover{
     .sidebar{
         width: 100%;
     }
+}
+.nori-icon{
+    width: 30px;
+    height: 30px;
 }
